@@ -1,0 +1,21 @@
+<html>
+<body>
+    <div class="login">
+        <h1>wind Forecasting</h1>
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <div class="mb-3">
+                <label class="form-label">n_fultures</label>
+                <input class="form-control" type="number" name="n_fultures"
+                    placeholder="Predict" />
+            </div>
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Predict " required />
+            </div>
+        </form>
+        <h2>
+            THE  prediction is {{results}}
+         </h2>
+         
+    </div>
+</body>
+</html>
